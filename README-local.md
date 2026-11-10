@@ -25,6 +25,24 @@ Chrome / any app ──> PipeWire sink "OwnTone (AirPlay 2)"
   Enter it once in the web page. Exercise Room is already paired.
 - Audio lags video by about 2 seconds (normal for AirPlay).
 
+## Switching locations (e.g. the cabin)
+
+Nothing to reconfigure; OwnTone discovers AirPlay devices on whatever network
+you're on.
+
+1. Leave Sound Preferences on **"OwnTone (AirPlay 2)"**.
+2. Open http://localhost:3689 and click the speaker icon in the bottom bar.
+   Turn on the local device(s); turn off any home devices still listed.
+3. First time with a pairing device (e.g. an Apple TV): enter the PIN shown on
+   its screen. Pairings are remembered, so switching back home needs no PIN.
+
+If a device doesn't appear:
+
+- Make sure the laptop and the device are on the same Wi-Fi (guest networks
+  and split 2.4/5 GHz networks often can't see each other).
+- `sudo systemctl restart owntone` to re-run discovery.
+- Older AirPlay 1 speakers may also work directly from Sound Preferences.
+
 ## If sound stops
 
 - Check that the output is still "OwnTone (AirPlay 2)".
